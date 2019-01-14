@@ -1,0 +1,33 @@
+#Imports
+from time import sleep
+#Global Variables
+operator = "+"
+Num1=0
+Num2=0
+#Function Definitions
+def intro():
+    print("Welcome to my bad calculator")
+    return
+def inputboi():
+    Operator = input('Would you like to add, subtract, multiply, or divide? ')
+    Num1=int(input('What is your first number? '))
+    Num2=int(input('What is your second number? '))
+    return
+def c():
+    if (operator == 'add'):
+        print(Num1+Num2)
+    elif (operator == 'subtract'):
+        print(Num1-Num2)
+    elif (operator == 'multiply'):
+        print(Num1*Num2)
+    elif (operator == 'divide'):
+        print(Num1/Num2)
+    return
+    
+#Executable Code
+
+
+intro()
+sleep(1)
+inputboi()
+c()
