@@ -1,0 +1,40 @@
+s=input('What would you like to calculate? ')
+
+index = s.find('-')
+if index == -1:
+    index = s.find('+')
+# Note: no ELSE here, just another 'if'
+if index == -1:
+    index = s.find('*')
+if index == -1:
+    index = s.find('/')
+if index == -1:
+    print("Ack! No operator found")
+
+op=s[index] # defines index as op 
+lp=len(s) #defines the length of it as lp
+
+p1=s[0:index] #set variable for beginning through the operator
+
+sign=s[index] #this defines the sign
+
+p2=s[index+1:lp]#this goes from the number past the sign to the end
+
+#print(p1) #these three are just to visualize
+
+#print(sign) #each individual part of the equation
+
+#print(p2) #for + and - it shows each part correctly, for * or / doesn't
+
+if sign == '+':
+    ans = (int(p1)+int(p2))#this is all the code that does the math ans = int(p1)+int(p2) #variable that is defined as the answer
+elif sign == '-': 
+    ans = (int(p1)-int(p2))
+elif sign == '*':
+    ans = (int(p1)*int(p2))
+elif sign == '/':
+    ans = (int(p1)/int(p2))
+else:
+    print ('I do not understand')
+
+print (p1,sign,p2,'=',ans) #for the user, visualizes equation
