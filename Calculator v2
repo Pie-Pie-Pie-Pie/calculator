@@ -1,0 +1,40 @@
+#Imports
+from time import sleep
+#Global Variables
+operator = "+"
+Num1=0
+Num2=0
+#Function Definitions
+def intro():
+    print("Welcome to my bad calculator")
+    return
+def inputboi():
+
+    global Num1
+    Num1=int(input('What is your first number? '))
+    global operator
+    operator = input('+, -, *, or /? ')
+    global Num2
+    Num2=int(input('What is your second number? '))
+    return
+def c():
+    if (operator == '+'):
+        print(Num1+Num2)
+    elif (operator == '-'):
+        print(Num1-Num2)
+    elif (operator == '*'):
+        print(Num1*Num2)
+    elif (operator == '/'):
+        print(Num1/Num2)
+    return
+    
+#Executable Code
+
+
+intro()
+stopper = 'y'
+while stopper != 'n':    
+    inputboi()
+    c()
+    stopper = input('Would you like to continue? y/n ')
+    
