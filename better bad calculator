@@ -1,0 +1,16 @@
+s=input('what would you like to calculate? ')
+index = s.find("-")
+if index == -1:
+    index = s.find('+')
+elif index == -1:
+    index=s.find('*')
+elif index == -1:
+    index = s.find('/')
+if index == -1:
+    index = s.find('+')
+
+else:
+    print(index)
+    op=s[index]
+    print(op)
+#this is still in progress
